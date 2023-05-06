@@ -5,12 +5,11 @@ const confirmPasswordEl = document.getElementById('confirm-password');
 const messageContainer = document.querySelector('.message-container');
 const message = document.querySelector('.message');
 
-console.log(form.elements.name.value)
 
 let isValid = false;
 
 function validateForm() {
-    isValid = form.checkValidity();
+    isValid = form.checkValidity();    // Check Validity is a Form Validity Constraint
     if (isValid) {
         if (passwordEl.value == confirmPasswordEl.value) {
             messageContainer.style.borderColor = 'green';
@@ -19,11 +18,11 @@ function validateForm() {
 
             const formData = new FormData(form);
 
+
             for (let [key, value] of formData.entries()) {
                 formData[key] = value;
             }
 
-            localStorage.setItem('formData', JSON.stringify(formData));
 
             form.reset();
         } else {
