@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Sign Up Today!</h1>
+        <form action="/">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" name="name" id="full-name" placeholder="Full Name" required minlength="3"
+                    maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input type="tel" name="number" id="number" placeholder="+919876543210" required
+                    pattern="^\+91[0-9]{10}$">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="email@address.com" required>
+            </div>
+            <div class="form-group">
+                <label for="url">Website URL</label>
+                <input type="url" name="website" id="url" placeholder="https://www.example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Create Password" required
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};': \\|,.<>/?]).{8,}$">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};': \\|,.<>/?]).{8,}$">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <div class="message-container">
+            <h3 class="message">
+                Don't Hesitate!
+            </h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
